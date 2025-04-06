@@ -38,7 +38,7 @@ const Hero=()=> {
             >
             <div className="blur-2xl bg-purple-blur rounded-full h-40 w-40 sm:h-52 sm:w-52"></div>
             <div className="text-center sm:text-left space-y-3 z-20">
-                <h1 className="text-neon font-semibold text-3xl sm:text-4xl">
+                <h1 className="text-neon font-semibold text-4xl sm:text-4xl">
                 Hello, 
                 <span className="sm:block text-nowrap">I am Gwyneth</span>
                 </h1>
@@ -57,8 +57,8 @@ const Hero=()=> {
             transition={{duration:1}}
             className="z-20"
             >
-            <div className="absolute bottom-0 z-20 w-96 h-96 right-3">
-                <img src={ProfilePicture} alt="Photo of Gwyneth" />
+            <div className="absolute bottom-0 z-20 w-[500px] h-[500px] right-3">
+                <img src={ProfilePicture} alt="Photo of Gwyneth" className="justify-center"/>
             </div>
             <div className="absolute bottom-0 rounded-full bg-blue-blur blur-2xl w-96 h-96 right-3">
                 
