@@ -119,7 +119,7 @@ void main() {
 `;
 
 const Threads = ({
-  color = [198, 46, 232],
+  color = [1, 1, 1],
   amplitude = 1,
   distance = 0,
   enableMouseInteraction = false,
