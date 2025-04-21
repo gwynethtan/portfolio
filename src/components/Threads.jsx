@@ -20,12 +20,13 @@ uniform vec3 uColor;
 uniform float uAmplitude;
 uniform float uDistance;
 uniform vec2 uMouse;
+uniform float uIsMobile;
 
 #define PI 3.1415926538
 
-const int u_line_count = 40;
-const float u_line_width = 7.0;
-const float u_line_blur = 10.0;
+const int u_line_count = 30;  // Reduced from 40 for mobile
+const float u_line_width = 4.0;  // Reduced from 7.0
+const float u_line_blur = 6.0;   // Reduced from 10.0
 
 float Perlin2D(vec2 P) {
     vec2 Pi = floor(P);
@@ -49,7 +50,8 @@ float Perlin2D(vec2 P) {
 }
 
 float pixel(float count, vec2 resolution) {
-    return (1.0 / max(resolution.x, resolution.y)) * count;
+    float base = 1.0 / max(resolution.x, resolution.y);
+    return base * count * (uIsMobile > 0.5 ? 0.8 : 1.0);
 }
 
 float lineFn(vec2 st, float width, float perc, float offset, vec2 mouse, float time, float amplitude, float distance) {
@@ -59,9 +61,9 @@ float lineFn(vec2 st, float width, float perc, float offset, vec2 mouse, float t
     float amplitude_normal = smoothstep(split_point, 0.7, st.x);
     float amplitude_strength = 0.5;
     float finalAmplitude = amplitude_normal * amplitude_strength
-                           * amplitude * (1.0 + (mouse.y - 0.5) * 0.2);
+                         * amplitude * (1.0 + (mouse.y - 0.5) * (uIsMobile > 0.5 ? 0.1 : 0.2));
 
-    float time_scaled = time / 10.0 + (mouse.x - 0.5) * 1.0;
+    float time_scaled = time / 10.0 + (mouse.x - 0.5) * (uIsMobile > 0.5 ? 0.8 : 1.0);
     float blur = smoothstep(split_point, split_point + 0.05, st.x) * perc;
 
     float xnoise = mix(
@@ -127,12 +129,19 @@ const Threads = ({
 }) => {
   const containerRef = useRef(null);
   const animationFrameId = useRef();
+  const isMobile = useRef(false);
 
   useEffect(() => {
     if (!containerRef.current) return;
     const container = containerRef.current;
+    
+    // Check if mobile
+    isMobile.current = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-    const renderer = new Renderer({ alpha: true });
+    const renderer = new Renderer({
+      alpha: true,
+      antialias: false,  // Disable AA for sharper lines on mobile
+    });
     const gl = renderer.gl;
     gl.clearColor(0, 0, 0, 0);
     gl.enable(gl.BLEND);
@@ -145,17 +154,12 @@ const Threads = ({
       fragment: fragmentShader,
       uniforms: {
         iTime: { value: 0 },
-        iResolution: {
-          value: new Color(
-            gl.canvas.width,
-            gl.canvas.height,
-            gl.canvas.width / gl.canvas.height
-          ),
-        },
+        iResolution: { value: new Color(0, 0, 0) },
         uColor: { value: new Color(...color) },
-        uAmplitude: { value: amplitude },
-        uDistance: { value: distance },
+        uAmplitude: { value: isMobile.current ? amplitude * 0.7 : amplitude },
+        uDistance: { value: isMobile.current ? distance * 0.8 : distance },
         uMouse: { value: new Float32Array([0.5, 0.5]) },
+        uIsMobile: { value: isMobile.current ? 1.0 : 0.0 },
       },
     });
 
@@ -163,11 +167,20 @@ const Threads = ({
 
     function resize() {
       const { clientWidth, clientHeight } = container;
-      renderer.setSize(clientWidth, clientHeight);
-      program.uniforms.iResolution.value.r = clientWidth;
-      program.uniforms.iResolution.value.g = clientHeight;
-      program.uniforms.iResolution.value.b = clientWidth / clientHeight;
+      const dpr = isMobile.current ? Math.min(2, window.devicePixelRatio) : window.devicePixelRatio;
+      
+      // Set actual and display sizes
+      gl.canvas.width = clientWidth * dpr;
+      gl.canvas.height = clientHeight * dpr;
+      gl.canvas.style.width = `${clientWidth}px`;
+      gl.canvas.style.height = `${clientHeight}px`;
+      
+      renderer.setSize(clientWidth, clientHeight, false);
+      program.uniforms.iResolution.value.r = gl.canvas.width;
+      program.uniforms.iResolution.value.g = gl.canvas.height;
+      program.uniforms.iResolution.value.b = gl.canvas.width / gl.canvas.height;
     }
+    
     window.addEventListener("resize", resize);
     resize();
 
@@ -180,9 +193,11 @@ const Threads = ({
       const y = 1.0 - (e.clientY - rect.top) / rect.height;
       targetMouse = [x, y];
     }
+    
     function handleMouseLeave() {
       targetMouse = [0.5, 0.5];
     }
+    
     if (enableMouseInteraction) {
       container.addEventListener("mousemove", handleMouseMove);
       container.addEventListener("mouseleave", handleMouseLeave);
@@ -190,32 +205,33 @@ const Threads = ({
 
     function update(t) {
       if (enableMouseInteraction) {
-        const smoothing = 0.05;
+        const smoothing = isMobile.current ? 0.1 : 0.05;
         currentMouse[0] += smoothing * (targetMouse[0] - currentMouse[0]);
         currentMouse[1] += smoothing * (targetMouse[1] - currentMouse[1]);
         program.uniforms.uMouse.value[0] = currentMouse[0];
         program.uniforms.uMouse.value[1] = currentMouse[1];
-      } else {
-        program.uniforms.uMouse.value[0] = 0.5;
-        program.uniforms.uMouse.value[1] = 0.5;
       }
+      
       program.uniforms.iTime.value = t * 0.001;
-
       renderer.render({ scene: mesh });
       animationFrameId.current = requestAnimationFrame(update);
     }
+    
     animationFrameId.current = requestAnimationFrame(update);
 
     return () => {
-      if (animationFrameId.current)
-        cancelAnimationFrame(animationFrameId.current);
+      cancelAnimationFrame(animationFrameId.current);
       window.removeEventListener("resize", resize);
-
+      
       if (enableMouseInteraction) {
         container.removeEventListener("mousemove", handleMouseMove);
         container.removeEventListener("mouseleave", handleMouseLeave);
       }
-      if (container.contains(gl.canvas)) container.removeChild(gl.canvas);
+      
+      if (container.contains(gl.canvas)) {
+        container.removeChild(gl.canvas);
+      }
+      
       gl.getExtension("WEBGL_lose_context")?.loseContext();
     };
   }, [color, amplitude, distance, enableMouseInteraction]);
