@@ -34,11 +34,11 @@ const Services=()=> {
             viewport={{once:false}}
             transition={{duration:2}}
             >
-              <div className="rounded-2xl border-2 border-neon bg-card flex-col justify-items-center p-4 space-y-8">
+              <div className="rounded-2xl border-2 border-neon bg-card flex flex-col items-center justify-center p-4 space-y-8">
+
                 <h2 className="block font-semibold text-lg text-white">{serviceCard.title}</h2>
                 <div className="filter drop-shadow-[0_0_24px_rgba(0,255,255,1)]">
                 <img src={serviceCard.icon} alt="Service Icon" className="w-14 h-14 "/>
-
                 </div>
                 <p className="block text-secondary text-sm font-medium text-justify break-words">{serviceCard.description}</p>
               </div>

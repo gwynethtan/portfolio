@@ -24,7 +24,7 @@ const Skills=()=> {
             
             {/* Hero content */}
             <div className="relative h-screen w-screen flex items-center">
-                <div className="w-screen flex-col lg:flex-row lg:flex items-center justify-items-center lg:justify-between px-8 lg:px-24 relative">
+                <div className="w-screen flex-col lg:flex-row flex items-center justify-center lg:justify-between px-8 lg:px-24 relative">
                     <motion.div
                     initial={{opacity:0, x:-50}}
                     whileInView={{opacity:1, x:0}}
@@ -41,15 +41,15 @@ const Skills=()=> {
                     </motion.div>
                     
                     <motion.div
-                    initial={{opacity:0, x:50}}
+                    initial={{opacity:0, x:5}}
                     whileInView={{opacity:1, x:0}}
                     viewport={{once:false}}
                     transition={{duration:1}}
                     className="z-20"
                     >
-                    <div className="mt-14 filter drop-shadow-[0_0_100px_rgba(0,255,255,10)] flex justify-center bottom-5 z-20 w-screen h-[100vw] md:w-[70vw] md:h-[70vw] lg:w-[30vw] lg:h-[30vw]">
-                        <IconCloudGlobe/>
-                    </div>
+                        <div className="mt-14 filter drop-shadow-[0_0_100px_rgba(0,255,255,10)] flex justify-center bottom-5 z-20 w-screen h-[100vw] md:w-[70vw] md:h-[70vw] lg:w-[30vw] lg:h-[30vw]">
+                            <IconCloudGlobe/>
+                        </div>
                     </motion.div>
                 </div>
             </div>
