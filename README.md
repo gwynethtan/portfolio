@@ -1,6 +1,6 @@
-# Gwyneth's Portfolio
+# 💻 Gwyneth's Portfolio
 
-![Portfolio Screenshot](./portfolioCover.png)  
+![Portfolio Screenshot](/portfolioCover.png)  
 https://portfolio-gwynethtann.vercel.app/
 
 ## 🌟 Features
