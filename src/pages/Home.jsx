@@ -6,8 +6,8 @@ import Achievements from "../components/Achievements";
 import Skills from "../components/Skills";
 import Footer from "../components/Footer";
 import ClickSpark from '../components/ClickSpark';
-import ProjectCard from '../components/ProjectCard';
-import VerticalTimelinePeriod from '../components/VerticalTimeline';
+import ProjectPreview from '../components/ProjectPreview'
+  
 export default function App() {
   return (
     <>
