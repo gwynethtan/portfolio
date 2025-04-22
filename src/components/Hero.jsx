@@ -29,7 +29,7 @@ const Hero=()=> {
             
             {/* Hero content */}
             <div className="relative h-screen w-screen flex overflow-hidden">
-                <div className=" flex-col lg:flex-row flex items-center justify-center lg:justify-between px-8 md:px-12 lg:px-24 relative">
+                <div className=" flex-col lg:flex-row flex items-center justify-center lg:justify-between px-2 md:px-12 lg:px-24 relative">
                     <motion.div
                     initial={{opacity:0, x:-50}}
                     whileInView={{opacity:1, x:0}}
@@ -38,9 +38,9 @@ const Hero=()=> {
                     className="z-20"
                     >
                         <div className="text-center lg:text-left pt-32 md:pt-36 lg:pt-0 space-y-3 lg:space-y-8">
-                            <h1 className="filter drop-shadow-[0_0_80px_rgba(0,255,255,1)] text-neon font-semibold tracking-wide text-3xl md:text-[4vh] lg:text-[9vh]">
+                            <h1 className="filter drop-shadow-[0_0_80px_rgba(0,255,255,1)] text-neon font-semibold tracking-wide text-3xl md:text-[3rem] lg:text-[4rem]">
                             Hello, 
-                            <span className="lg:block lg:pt-10 text-nowrap">I am Gwyneth</span>
+                            <span className="inline lg:block lg:pt-10 text-nowrap">I am Gwyneth</span>
                             </h1>
                             <h2 className="text-white font-semibold text-base sm:pt-2 md:text-lg lg:text-xl">Design . Program . Create</h2>
                             <p className="text-secondary font-semibold lg:text-justify break-words text-sm md:text-base lg:text-lg lg:w-[48vw] pb-6 lg:pb-10">

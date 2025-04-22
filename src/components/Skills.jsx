@@ -23,7 +23,7 @@ const Skills=()=> {
             </div>
             
             {/* Hero content */}
-            <div className="relative h-screen w-screen flex items-center">
+            <div className="relative min-h-screen w-screen flex items-center">
                 <div className="w-screen flex-col lg:flex-row flex items-center justify-center lg:justify-between px-8 lg:px-24 relative">
                     <motion.div
                     initial={{opacity:0, x:-50}}

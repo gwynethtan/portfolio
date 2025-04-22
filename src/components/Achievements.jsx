@@ -4,7 +4,8 @@ import AchievementCard from './AchievementCard';
 
 const Achievements=()=> {
   return (
-    <section className="h-screen w-screen flex justify-center items-center pb-32 md:pb-36 lg:pb-40">
+    <div className="block">
+    <section className="min-h-screen w-screen flex justify-center items-center pb-32 md:pb-36 lg:pb-40">
         <motion.div
         initial={{opacity:0, x:-70}}
         whileInView={{opacity:1, x:0}}
@@ -15,6 +16,8 @@ const Achievements=()=> {
         <AchievementCard/>
         </motion.div>
     </section>
+    </div>
+
   );
 }
 
