@@ -16,7 +16,7 @@ const Header=({ title, quotes = [] })=>{
         >
             <div className="justify-center flex lg:justify-between">
                 <img src={Wave} className="hidden lg:inline-block lg:h-40 lg:w-[30vw]"/>
-                <div className="text-center flex-col mx-10">
+                <div className="text-center flex-col mx-2 lg:mx-10">
                     <h1 className="font-bold text-neon text-4xl md:text-[3rem] lg:text-[3rem] pt-12 pb-3 sm:pb-5">{title}</h1>
                     <TypeAnimation
                     sequence={sequence}
