@@ -47,7 +47,7 @@ const Skills=()=> {
                     transition={{duration:1}}
                     className="z-20"
                     >
-                        <div className="mt-14 filter drop-shadow-[0_0_100px_rgba(0,255,255,10)] flex justify-center bottom-5 z-20 w-screen h-[100vw] md:w-[70vw] md:h-[70vw] lg:w-[30vw] lg:h-[30vw]">
+                        <div className="mt-14 filter drop-shadow-[0_0_18px_rgba(0,255,255,0.3)] md:drop-shadow-[0_0_28px_rgba(0,255,255,0.3)] lg:drop-shadow-[0_0_40px_rgba(0,255,255,0.5)] flex justify-center bottom-5 z-20 w-screen h-[100vw] md:w-[70vw] md:h-[70vw] lg:w-[30vw] lg:h-[30vw]">
                             <IconCloudGlobe/>
                         </div>
                     </motion.div>

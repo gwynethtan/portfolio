@@ -12,7 +12,7 @@ const achievementCards=[
 ]
 const AchievementCard=()=> {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 gap-9 md:gap-10 lg:gap-12 px-6 lg:px-28 filter drop-shadow-[0_0_200px_rgba(0,255,255,0.9)]">
+    <section className="grid grid-cols-1 lg:grid-cols-2 gap-9 md:gap-10 lg:gap-12 px-6 lg:px-28 filter">
       {
         achievementCards.map((achievementCard,index)=>(
           <article key={index} className="rounded-2xl border-2 border-neon bg-card">

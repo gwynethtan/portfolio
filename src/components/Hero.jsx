@@ -57,7 +57,7 @@ const Hero=()=> {
                     transition={{duration:1}}
                     className="z-20 flex justify-center items-end h-full"
                     >
-                    <div className="pt-5 pr-12 filter drop-shadow-[0_0_100px_rgba(0,255,255,.5)] flex justify-center z-20 w-[84vw] h-[56vh] md:w-[70vw] md:h-[60vh] lg:w-[46vw] lg:h-[80vh]">
+                    <div className="pt-5 pr-12 filter drop-shadow-[0_0_18px_rgba(0,255,255,0.3)] md:drop-shadow-[0_0_28px_rgba(0,255,255,0.3)] lg:drop-shadow-[0_0_40px_rgba(0,255,255,0.5)] flex justify-center z-20 w-[84vw] h-[56vh] md:w-[70vw] md:h-[60vh] lg:w-[46vw] lg:h-[80vh]">
                         <img src={ProfilePicture}/>
                     </div>
                     </motion.div>
