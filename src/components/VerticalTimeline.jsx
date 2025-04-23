@@ -11,9 +11,9 @@ const experiences=[
         date:'February 2025 - April 2025',
         title:'Software Developer Internship',
         place:'Center of Environmental Sustainability',
-        details:["Contributed to the development of a full-stack internal web platform for resource management and booking, enhancing usability and workflow efficiency.",
-            "Supported hardware-software integration,handled I/O junction setup and backend functionality for a filtration system, which was then showcased at an industry event in EXPO.",
-            "Designed and implemented scalable database structures, backend services, and responsive UI components to improve data flow and user experience."
+        details:["Contributed to the development of a full-stack internal web platform for resource management & booking used by 3 departments, enhancing usability and workflow efficiency",
+            "Supported hardware-software integration, handled I/O junction setup & backend functionality for a filtration system, which was then showcased at an industry event in EXPO with 65,000+ attendees",
+            "Designed & implemented scalable database structures, backend services, & responsive UI components in 6 core pages to improve data flow and user experience"
         ]
     },
     {
@@ -21,9 +21,9 @@ const experiences=[
         date:'August 2023 - October 2023',
         title:'UI/UX Designer Internship',
         place:'Leaptechnology',
-        details:["Managed 3 company projects, creating intuitive interfaces that enhanced user experience.",
-            "Collaborated with clients and developers to turn design concepts into functional prototypes, refining designs through iterative cycles.",
-            "Leveraged industry best practices and emerging design trends to inform design decisions, staying abreast of developments in UI/UX design."
+        details:["Managed 3 company projects, creating intuitive interfaces that enhanced user experience",
+            "Collaborated with clients & a team of 5 developers to turn design concepts into functional prototypes, refining designs through iterative cycles",
+            "Leveraged industry best practices & emerging design trends to inform design decisions, staying abreast of developments in UI/UX design"
         ]
     },
     {
@@ -32,8 +32,8 @@ const experiences=[
         title:'Diploma in Immersive Media (School of ICT)',
         place:'Ngee Ann Polytechnic',
         details:["Developed expertise in web and multimedia development by working with APIs, databases, and frameworks, equipping me to create scalable and reliable applications.",
-            "Gained a strong foundation in UI/UX design, learning how to create user-centered, accessible, and visually appealing interfaces.",
-            "Explored the strategic role of design and development in driving business outcomes, learning how to align technical solutions with organizational goals to foster innovation and growth.",
+            "Gained a strong foundation in UI/UX design, learning how to create user-centered, accessible, and visually appealing interfaces",
+            "Explored the strategic role of design and development in driving business outcomes, learning how to align technical solutions with organizational goals to foster innovation and growth",
             "CCAs: ICT Society, The Christieara Committee (Subcommittee), Environmental Rangers Club"
         ]
     },
@@ -42,8 +42,8 @@ const experiences=[
         date:'January 2019 - December 2022',
         title:'O levels',
         place:'Clementi Town Secondary School',
-        details:["Took O level Computing which exposed me to the world of technology, where I developed foundational skills in programming, problem-solving, and computational thinking.",
-            "Actively participated in multiple hackathons, collaborating with diverse teams to create innovative solutions under time constraints.",
+        details:["Took O level Computing which exposed me to the world of technology, where I developed foundational skills in programming, problem-solving, and computational thinking",
+            "Actively participated in multiple hackathons, collaborating with diverse teams to create innovative solutions under time constraints",
             "CCAs: Class Committee (Class Chairperson), Student Council (EXCO), National Civil Defense Cadet Corps (Staff Sergeant)"
         ]
     }

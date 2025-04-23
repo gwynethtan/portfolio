@@ -16,9 +16,9 @@ export default function App() {
         <Header 
           title="Projects"
           quotes={[
-            "Turning concepts into code, and visions into visuals",
+            "Designed for humans, not screens",
             "Creativity is intelligence having fun",
-            "Projects are the bridge between thinking and doing"
+            "Building bridges between ideas and reality"
           ]}
         />           
         <ProjectCard/>
