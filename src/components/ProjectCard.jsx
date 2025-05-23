@@ -1,5 +1,5 @@
 import Tilt from 'react-parallax-tilt';
-
+import Voia from '../assets/projectImages/voia.png'
 import PortfolioWeb from '../assets/projectImages/portfolioWeb.png'
 import YepWeb from '../assets/projectImages/yepWeb.png'
 import InfernoWeb from '../assets/projectImages/infernoWeb.png'
@@ -22,6 +22,13 @@ import Document from '../assets/document.png';
 import Figma from '../assets/figma.png';
 
 const projectDetails =[
+  {
+    title:'Voia',
+    image:Voia,
+    description:'(IN PROGRESS) This mixed reality capstone project aims to assist deaf individuals by bridging communication gaps between sign language users and non-signers. It detects sign language, converts it into complete text and audio output, and also supports audio detection. I experimented with YOLOv5, XR Hands, and Google Cloud AI APIs for sign recognition and speech processing.',
+    references:[
+    ]
+  },
   {
     title:'Portfolio Website',
     image:PortfolioWeb,
