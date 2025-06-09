@@ -6,7 +6,7 @@ const achievementCards=[
   "3.98 GPA, 16 Distinctions (Top 5% of module)",
   "Received leadership awards",
   "2 internships in tech consultancy companies",
-  "2x Top in Cohort, 3x Director’s List, 5x Module Prizes",
+  "3x Top in Cohort, 4x Director’s List, 6x Module Prizes",
   "Top Voted Project & Honourable mention for AISG hackathon",
   "Certificate in Advanced Computing Maths and Minor in Social Media Marketing"
 ]
