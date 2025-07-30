@@ -34,7 +34,7 @@ const experiences=[
         details:["Developed expertise in web and multimedia development by working with APIs, databases, and frameworks, equipping me to create scalable and reliable applications.",
             "Gained a strong foundation in UI/UX design, learning how to create user-centered, accessible, and visually appealing interfaces",
             "Explored the strategic role of design and development in driving business outcomes, learning how to align technical solutions with organizational goals to foster innovation and growth",
-            "CCAs: ICT Society, The Christieara Committee (Subcommittee), Environmental Rangers Club"
+            "CCAs: ICT Society, The Christieara Committee (Subcommittee), Environmental Rangers Club (EXCO)"
         ]
     },
     {
