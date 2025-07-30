@@ -1,4 +1,5 @@
 import Tilt from 'react-parallax-tilt';
+import SgPersonalityQuiz from '../assets/projectImages/sgPersonalityQuiz.png'
 import Voia from '../assets/projectImages/voia.png'
 import PortfolioWeb from '../assets/projectImages/portfolioWeb.png'
 import YepWeb from '../assets/projectImages/yepWeb.png'
@@ -23,10 +24,20 @@ import Figma from '../assets/figma.png';
 
 const projectDetails =[
   {
+    title:'SG60 Personality Quiz',
+    image:SgPersonalityQuiz,
+    description:'Designed and programmed this website to celebrate SG60 with a unique personality quiz where users build their own Singapore in real time. As they make choices, their digital environment transforms in real time. At the end, they receive a personality result with a description and their personalized SG60 world to screenshot.',
+    references:[
+      {icon:Link,link:'https://passionarts2025-ebde6.web.app/'},
+      {icon:Github,link:'https://github.com/gwynethtan/PAssionArts2025'}
+    ]
+  },  
+  {
     title:'Voia',
     image:Voia,
-    description:'(IN PROGRESS) This mixed reality capstone project aims to assist deaf individuals by bridging communication gaps between sign language users and non-signers. It detects sign language, converts it into complete text and audio output, and also supports audio detection. I experimented with YOLOv5, XR Hands, and Google Cloud AI APIs for sign recognition and speech processing.',
+    description:'(IN PROGRESS) A mixed reality capstone project that bridges communication gaps for the deaf by translating sign language into spoken audio for hearing individals and speech to text for deaf users. It also has a variety of engaging storybooks that users can choose from to support sign language learning.',
     references:[
+      {icon:Github,link:'https://github.com/gwynethtan/CP04_Voia_UnityProject'}
     ]
   },
   {
