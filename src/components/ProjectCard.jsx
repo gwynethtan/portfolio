@@ -1,6 +1,7 @@
 import Tilt from 'react-parallax-tilt';
+import VoiaMr from '../assets/projectImages/voiaMr.png'
+import VoiaWeb from '../assets/projectImages/voiaWeb.png'
 import SgPersonalityQuiz from '../assets/projectImages/sgPersonalityQuiz.png'
-import Voia from '../assets/projectImages/voia.png'
 import PortfolioWeb from '../assets/projectImages/portfolioWeb.png'
 import YepWeb from '../assets/projectImages/yepWeb.png'
 import InfernoWeb from '../assets/projectImages/infernoWeb.png'
@@ -24,6 +25,23 @@ import Figma from '../assets/figma.png';
 
 const projectDetails =[
   {
+    title:'Voia Mixed Reality',
+    image:VoiaMr,
+    description:'A mixed reality project that bridges communication for the deaf by translating sign language into spoken audio for hearing individals and speech to text for deaf users. It also provides an interactive storybook experience with many storybooks to choose from, where users use sign language to engage with and progress through a 3D narrative.',
+    references:[
+      {icon:Youtube,link:'https://www.youtube.com/watch?v=RELTZ8JL-X0'},
+      {icon:Github,link:'https://github.com/gwynethtan/CP04_Voia_UnityProject'},
+    ]},
+  {
+    title:'Voia Website',
+    image:VoiaWeb,
+    description:'The website promotes VOIA by raising brand awareness and allows users to join the waitlist for their chosen VOIA Boxes, while tracking users’ learning progress. It also includes gamified features like sign language spelling quizzes and earning badges and points, along with a personal gallery for users to relive cherished memories.',
+    references:[
+      {icon:Youtube,link:'https://youtu.be/5fNII0f-KjM'},
+      {icon:Link,link:'https://voia-fcf74.web.app/'},
+      {icon:Github,link:'https://github.com/gwynethtan/CP04_Voia_Website'}    ]
+  },
+  {
     title:'SG60 Personality Quiz',
     image:SgPersonalityQuiz,
     description:'Designed and programmed this website to celebrate SG60 with a unique personality quiz where users build their own Singapore in real time. As they make choices, their digital environment transforms in real time. At the end, they receive a personality result with a description and their personalized SG60 world to screenshot.',
@@ -33,21 +51,13 @@ const projectDetails =[
     ]
   },  
   {
-    title:'Voia',
-    image:Voia,
-    description:'(IN PROGRESS) A mixed reality capstone project that bridges communication gaps for the deaf by translating sign language into spoken audio for hearing individals and speech to text for deaf users. It also has a variety of engaging storybooks that users can choose from to support sign language learning.',
-    references:[
-      {icon:Github,link:'https://github.com/gwynethtan/CP04_Voia_UnityProject'}
-    ]
-  },
-  {
     title:'Portfolio Website',
     image:PortfolioWeb,
     description:'Designed and programmed this website to showcase my projects all in one place. It’s a space where people can get to know me, view my experiences, and reach out to me easily. The site’s fully responsive with animations and is designed to be clean and easy to navigate.',
     references:[
-      {icon:Youtube,link:'https://github.com/gwynethtan'},
-      {icon:Github,link:'https://github.com/gwynethtan/portfolio'},
-      {icon:Figma,link:'https://www.figma.com/design/fvrJ3EJfDf0d7e069G00qP/portfolio?node-id=0-1&t=wundoaJKYlgrDvqM-1'}
+      {icon:Youtube,link:'https://www.youtube.com/watch?v=8cRFKr-4PtA'},
+      {icon:Github,link:'https://github.com/gwynethtan/RoleModels'},
+      {icon:Document,link:'https://docs.google.com/document/d/1tzIogO_Qtd1-wvCa_t3F_0fPrrM6V9ZquGeACOo_y64/edit?tab=t.0'}
     ]
   },
   {

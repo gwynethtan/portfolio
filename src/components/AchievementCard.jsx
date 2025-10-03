@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import AchievementIcon from "../assets/checklist.png"
 
 const achievementCards=[
-  "3.98 GPA, 16 Distinctions (Top 5% of module)",
+  "3.99 GPA, 19 Distinctions (Top 5% of module)",
   "Received leadership awards",
-  "2 internships in tech consultancy companies",
+  "Completed 3 internships",
   "3x Top in Cohort, 4x Director’s List, 6x Module Prizes",
   "Top Voted Project & Honourable mention for AISG hackathon",
   "Certificate in Advanced Computing Maths and Minor in Social Media Marketing"
